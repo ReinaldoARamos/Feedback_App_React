@@ -1,3 +1,5 @@
+import {ChatTeardrop} from  'phosphor-react'; 
+
 export function Widget () {
-    return <h1>Widget</h1>
+    return <ChatTeardrop/>
 }
