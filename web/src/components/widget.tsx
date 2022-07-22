@@ -1,8 +1,18 @@
 import {ChatTeardrop} from  'phosphor-react'; 
+import { useCallback, useState } from 'react';
+
 
 export function Widget () {
+
+    const [isWidgetOpen, setWidgetOpen] = useState(false) //criando um state, uma variavel que será monitorada e quando mudar muda  o componente
+
+    function ToogleWidgetVisibility(){
+
+        setWidgetOpen(!setWidgetOpen)
+    }
     return (
         <div className='absolute bottom-5 right-5'>
+            <p>Hello Worlds</p>
             <button className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'> 
                 <ChatTeardrop className='w-6 h-6'/>
 
@@ -16,3 +26,5 @@ export function Widget () {
         
     )
 }
+//group = considera o pedaço da classe como grupo
+//overflow hidden = esconde atribvutos que sobreboem outro
