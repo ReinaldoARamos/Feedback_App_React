@@ -1,5 +1,6 @@
 import {ChatTeardrop} from  'phosphor-react'; 
 import {useState } from 'react';
+import { WidgetForm } from './widgetForm';
 
 
 export function Widget () {
@@ -13,7 +14,7 @@ export function Widget () {
     }
     return (
         <div className='absolute bottom-5 right-5'>
-          {isWidgetOpen ?   <p>Hello Worlds</p> : null}
+          {isWidgetOpen ?   <WidgetForm / > : null}
             <button onClick={ToogleWidgetVisibility} className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'> 
                 <ChatTeardrop className='w-6 h-6'/>
 
