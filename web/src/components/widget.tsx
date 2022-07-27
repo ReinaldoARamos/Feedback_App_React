@@ -13,7 +13,7 @@ export function Widget () {
         console.log(isWidgetOpen)
     }
     return (
-        <div className='absolute bottom-5 right-5'>
+        <div className='absolute bottom-5 right-5 flex-col items-end'>
           {isWidgetOpen ?   <WidgetForm / > : null}
             <button onClick={ToogleWidgetVisibility} className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'> 
                 <ChatTeardrop className='w-6 h-6'/>
