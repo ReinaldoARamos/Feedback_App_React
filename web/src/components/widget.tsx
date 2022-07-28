@@ -5,8 +5,11 @@ import {Popover} from '@headlessui/react';
 export function Widget () {
 
     return (
-       <Popover className='absolute bottom-4 right-4 md:bottom-10  flex-col items-end'>
-         
+       <Popover className='absolute bottom-4 right-4 md:bottom-10 md:right-10 flex  flex-col items-end'>
+         <Popover.Panel>
+                <WidgetForm/>
+            </Popover.Panel>
+
             <Popover.Button className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'> 
                 <ChatTeardrop className='w-6 h-6'/>
 
