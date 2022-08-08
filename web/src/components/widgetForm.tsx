@@ -26,7 +26,9 @@ const feedbackTypes = {
             alt: 'Imagem de uma nuvem'
         },
     }
-}
+};
+
+
 
 export function WidgetForm() {
     return (
@@ -39,7 +41,10 @@ export function WidgetForm() {
 
            <div className="flex py-8 gap-2 w-full">
 
-            {Object.entries(feedbackTypes)}
+            {Object.entries(feedbackTypes).map(([key, value])=> {
+                console.log(key, value)
+              return null;
+            } ) }
            </div>
 
            <footer className="text-md text-neutral-400">
