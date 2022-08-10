@@ -1,7 +1,7 @@
-import { CloseButton } from "./CloseButton";
-import bugImageURL from '../assets/bug.svg';
-import IdeaURL from '../assets/ideia.svg';
-import OtherURL from '../assets/other.svg';
+import { CloseButton } from "../CloseButton";
+import bugImageURL from '../../assets/bug.svg';
+import IdeaURL from '../../assets/ideia.svg';
+import OtherURL from '../../assets/other.svg';
 import { useState } from "react";
 
 
@@ -41,26 +41,31 @@ export function WidgetForm() {
 
             <CloseButton />
            </header>
-
+        {!FeedbackType ? (
+            
            <div className="flex py-8 gap-2 w-full">
 
-            {Object.entries(feedbackTypes).map(([key, value])=> {
-                console.log(key, value)
-              return (
-                <button
-                className="bg-zinc-800 rounder-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent
-                          hover:border-brand-500 focus:order-brand-500 focus:outline-none"
-                
-                key={key}
-               onClick={() => setFeedbackType(key as FeedbackType)}
-                >
-                    <img className="h-10"
-                     src= {value.Image.source} alt={value.Image.alt}  />
-                    <span>{value.title}</span>
-                </button>
-              );
-            } ) }
-           </div>
+           {Object.entries(feedbackTypes).map(([key, value])=> {
+               
+             return (
+               <button
+               className="bg-zinc-800 rounder-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent
+                         hover:border-brand-500 focus:order-brand-500 focus:outline-none"
+               
+               key={key}
+              onClick={() => setFeedbackType(key as FeedbackType)}
+               >
+                   <img className="h-10"
+                    src= {value.Image.source} alt={value.Image.alt} 
+                     />
+                   <span>{value.title}</span>
+               </button>
+             );
+           } ) }
+          </div>
+        ) : (
+            <p>hello World</p>
+        )}
 
            <footer className="text-md text-neutral-400">
                     feito com amor pela <a className="underline underline-offset-2" href="https://www.youtube.com/watch?v=5pCUDdUQspc" target={"_blank"}>Neco Arc :3</a>
