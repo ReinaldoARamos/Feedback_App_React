@@ -1,7 +1,7 @@
 import { CloseButton } from "./CloseButton";
-import bugImageURL from '../assets/bug.png';
-import IdeaURL from '../assets/ideia.png';
-import OtherURL from '../assets/other.png';
+import bugImageURL from '../assets/bug.svg';
+import IdeaURL from '../assets/ideia.svg';
+import OtherURL from '../assets/other.svg';
 
 
 const feedbackTypes = {
@@ -24,10 +24,10 @@ const feedbackTypes = {
         Image: {
             source: OtherURL,
             alt: 'Imagem de uma nuvem'
+        
         },
     }
 };
-
 
 
 export function WidgetForm() {
@@ -43,7 +43,16 @@ export function WidgetForm() {
 
             {Object.entries(feedbackTypes).map(([key, value])=> {
                 console.log(key, value)
-              return null;
+              return (
+                <button
+                className="bg-zinc-800 rounder-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:order-brand-500 focus:outline-none"
+
+                >
+                    <img className="h-10"
+                     src= {value.Image.source} alt={value.Image.alt}  />
+                    <span>{value.title}</span>
+                </button>
+              );
             } ) }
            </div>
 
