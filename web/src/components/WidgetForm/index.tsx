@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { CloseButton } from "../CloseButton";
-import bugImageURL from '../../assets/bug.svg';
+
+import bugImageURL from '../../assets/bug.svg'
 import IdeaURL from '../../assets/ideia.svg';
 import OtherURL from '../../assets/other.svg';
-import { useState } from "react";
+
 import { FeedbackTypeStep } from "../WidgetForm/Steps/FeedbackTypeStep";
 
 
